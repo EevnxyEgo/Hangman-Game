@@ -1,0 +1,71 @@
+:root {
+  /* core palette */
+  --azure: #3e80f4;
+  --medium-turquoise: #63d6ce;
+  --corn: #f8e74b;
+  --corn-soft: #fdf7c4;
+  --gunmetal: #1c3041;
+  --black-olive: #353531;
+
+  /* extended theme */
+  --bg-1: #312e81;
+  --bg-2: #1e1b4b;
+  --bg-3: #0f172a;
+  --panel-left-1: #5eead4;
+  --panel-left-2: #2dd4bf;
+  --panel-right-1: #3b82f6;
+  --panel-right-2: #4f46e5;
+  --ink: #f8fafc;
+  --muted: #cbd5e1;
+  --green: #34d399;
+  --red: #f87171;
+  --card-radius: 22px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Fredoka", "Noto Sans KR", system-ui, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2) 55%, var(--bg-3));
+  background-size: 200% 200%;
+  animation: bg-drift 18s ease infinite;
+}
+
+@keyframes bg-drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#root > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hint-footer {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  opacity: 0.8;
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>행맨 · Hangman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./src/app.css" />
+  </head>
+  <body>
+    <div id="root">
+      <main>
+        <div class="app">
+          <!-- LEFT: Hangman drawing -->
+          <div class="hangman-image-container">
+            <canvas id="hangman-image" width="350" height="550"></canvas>
+          </div>
+
+          <!-- RIGHT: Controls -->
+          <div class="controller-container">
+            <div id="app-header"></div>
+            <div id="stats-bar"></div>
+            <div id="meta"></div>
+            <div id="word"></div>
+            <div id="clue"></div>
+            <div id="keyboard-layout"></div>
+            <div id="action-bar"></div>
+          </div>
+
+          <!-- Win / Lose modal lives on top of the whole card -->
+          <div id="overlay"></div>
+        </div>
+        <p class="hint-footer">
+          Tip: you can use your physical keyboard to guess letters.
+        </p>
+      </main>
+    </div>
+
+    <!-- Loaded in dependency order. No bundler required — these are plain
+         browser scripts that share one global namespace: window.HM -->
+    <script src="./src/dom.js"></script>
+    <script src="./src/util.js"></script>
+    <script src="./src/words.js"></script>
+    <script src="./src/image-util.js"></script>
+    <script src="./src/sound.js"></script>
+    <script src="./src/state.js"></script>
+    <script src="./src/components.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
