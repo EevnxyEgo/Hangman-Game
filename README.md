@@ -3,6 +3,8 @@
 A polished, browser-based Hangman game built with **vanilla HTML, CSS, and
 JavaScript** — no frameworks and **no build step**. Just open `index.html`.
 
+**▶️ Live demo: https://hangman-game-beige-six.vercel.app**
+
 The code follows a small **State → Component → Game-Logic** architecture
 (immutable state, pure update functions, and render-only components), the
 same pattern taught in the accompanying course material.
@@ -35,6 +37,19 @@ Double-click `index.html`.
 ```bash
 python -m http.server 8123
 # then open http://localhost:8123
+```
+
+## ☁️ Deployment
+
+The site is deployed as a static project on **Vercel** — there is no build
+step, so Vercel simply serves the files from the repository root.
+
+- **Production:** https://hangman-game-beige-six.vercel.app
+
+To redeploy from the command line:
+
+```bash
+vercel deploy --prod
 ```
 
 ## 🎮 How to play
